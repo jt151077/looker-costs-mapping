@@ -1,0 +1,1 @@
+SELECT * FROM `.multi_cloud_costs.gcp_cloud_billing_export`;

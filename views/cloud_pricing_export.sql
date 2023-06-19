@@ -1,0 +1,1 @@
+SELECT * FROM `.billing_exports.cloud_pricing_export`
