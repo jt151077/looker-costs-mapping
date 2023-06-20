@@ -37,7 +37,7 @@ WITH
     GENERATE_UUID() AS row_key,
     ProductId AS service_key,
     ProductId AS service_type_key,
-    CAST(date AS date) AS usage_end_date,
+    CAST(date AS DATE) AS usage_end_date,
     quantity AS usage_quantity,
     CAST(servicePeriodStartDate AS DATE) AS usage_start_date,
     LOWER(unitOfMeasure) AS usage_unit_of_measure_key
