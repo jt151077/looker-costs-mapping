@@ -62,7 +62,7 @@ $ terraform apply
 
 2. Setup GCP billing export to BigQuery in the same project, under the dataset `billing_exports`:
 
-![](imgs/3.png)
+![](imgs/2.png)
 
 3. Excecute the workflow manually:
 
