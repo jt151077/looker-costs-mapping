@@ -67,3 +67,13 @@ $ terraform apply
 3. Setup AZR billinmg export to a storage container:
 
 ![](imgs/3.png)
+
+4. Create a SAS token authorised access:
+
+![](imgs/4.png)
+
+5. Create a Data Transfer in BigQuery:
+
+![](imgs/5.png)
+
+6. Install the different `blocks` in Looker, and update the blocks configurations to point to your project/dataset

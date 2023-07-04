@@ -21,6 +21,19 @@ resource "google_bigquery_dataset" "multi_cost_ds" {
   location      = local.billing_export_dataset_region
 }
 
+resource "google_bigquery_table" "azure_billing_export" {
+  depends_on = [
+    google_bigquery_dataset.multi_cost_ds
+  ]
+
+  project             = local.project_id
+  dataset_id          = google_bigquery_dataset.multi_cost_ds.dataset_id
+  table_id            = "azure_billing_export"
+  deletion_protection = false
+  schema = file("${path.module}/schemas/20230524_azure_billing_export_schema.json")
+}
+
+
 resource "google_bigquery_table" "azure_cloud_billing_export" {
   depends_on = [
     google_bigquery_dataset.multi_cost_ds
