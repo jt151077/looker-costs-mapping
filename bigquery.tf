@@ -30,7 +30,7 @@ resource "google_bigquery_table" "azure_billing_export" {
   dataset_id          = google_bigquery_dataset.multi_cost_ds.dataset_id
   table_id            = "azure_billing_export"
   deletion_protection = false
-  schema = file("${path.module}/schemas/20230524_azure_billing_export_schema.json")
+  schema              = file("${path.module}/schemas/20230524_azure_billing_export_schema.json")
 }
 
 
